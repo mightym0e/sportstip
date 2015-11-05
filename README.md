@@ -4,7 +4,7 @@ HTW Berlin Webapplications Project
 
 Sport Tipp Spiel
 
-Allgemein 
+##Allgemein 
 
 Es soll ein webbasiertes Tippspiel entwickelt werden, in dem die Anwender in einem vom Spielleiter generierten Wettbewerb Tipps für einzelne Spiele abgeben kann. 
 
@@ -12,9 +12,7 @@ Bei diesem Spiel muss der Spielleiter/Administrator im Vorhinein Wettbewerbe und
 
 Die Spiele müssen dabei mit einem Ablaufdatum versehen werden, ab dem die Tipps nicht mehr geändert werden können. 
 
-Seitenumbruch 
-
-Grundlegende Features 
+##Grundlegende Features 
 
  
 
