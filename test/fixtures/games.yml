@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home: MyText
+  guest: MyText
+  points_home: 1
+  points_guest: 1
+
+two:
+  home: MyText
+  guest: MyText
+  points_home: 1
+  points_guest: 1

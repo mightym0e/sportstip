@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @tipgroup.name %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @tipgroup.owner %>
+</p>
+
+<%= link_to 'Edit', edit_tipgroup_path(@tipgroup) %> |
+<%= link_to 'Back', tipgroups_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Tipgroups</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Owner</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tipgroups.each do |tipgroup| %>
+      <tr>
+        <td><%= tipgroup.name %></td>
+        <td><%= tipgroup.owner %></td>
+        <td><%= link_to 'Show', tipgroup %></td>
+        <td><%= link_to 'Edit', edit_tipgroup_path(tipgroup) %></td>
+        <td><%= link_to 'Destroy', tipgroup, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tipgroup', new_tipgroup_path %>

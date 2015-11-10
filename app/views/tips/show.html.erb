@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Points home:</strong>
+  <%= @tip.points_home %>
+</p>
+
+<p>
+  <strong>Points guest:</strong>
+  <%= @tip.points_guest %>
+</p>
+
+<%= link_to 'Edit', edit_tip_path(@tip) %> |
+<%= link_to 'Back', tips_path %>
