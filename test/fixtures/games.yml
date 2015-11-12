@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  home: MyText
-  guest: MyText
-  points_home: 1
-  points_guest: 1
+  home: Bayern München
+  guest: BvB Dortmund
+  points_home: 2
+  points_guest: 3
 
 two:
-  home: MyText
-  guest: MyText
-  points_home: 1
-  points_guest: 1
+  home: Hansa Rostock
+  guest: Hertha BSC
+  points_home: 4
+  points_guest: 2
