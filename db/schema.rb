@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112194252) do
+ActiveRecord::Schema.define(version: 20151112200450) do
 
   create_table "games", force: :cascade do |t|
     t.text     "home"
@@ -64,8 +64,6 @@ ActiveRecord::Schema.define(version: 20151112194252) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.boolean  "isadmin"
-    t.string   "default"
-    t.string   "false"
   end
 
 end
