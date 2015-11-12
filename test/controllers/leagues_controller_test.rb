@@ -18,7 +18,7 @@ class LeaguesControllerTest < ActionController::TestCase
 
   test "should create league" do
     assert_difference('League.count') do
-      post :create, league: { name: @league.name, type: @league.type }
+      post :create, league: { name: @league.name, sport: @league.sport }
     end
 
     assert_redirected_to league_path(assigns(:league))
@@ -35,7 +35,7 @@ class LeaguesControllerTest < ActionController::TestCase
   end
 
   test "should update league" do
-    patch :update, id: @league, league: { name: @league.name, type: @league.type }
+    patch :update, id: @league, league: { name: @league.name, sport: @league.sport }
     assert_redirected_to league_path(assigns(:league))
   end
 

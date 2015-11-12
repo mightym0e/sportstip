@@ -1,1 +1,1 @@
-json.extract! @league, :id, :name, :type, :created_at, :updated_at
+json.extract! @league, :id, :name, :sport, :created_at, :updated_at
