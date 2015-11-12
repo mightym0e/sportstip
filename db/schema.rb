@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112194252) do
+ActiveRecord::Schema.define(version: 20151112195926) do
 
   create_table "games", force: :cascade do |t|
     t.text     "home"
@@ -45,7 +45,10 @@ ActiveRecord::Schema.define(version: 20151112194252) do
     t.integer  "points_guest"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
   end
+
+  add_index "tips", ["user_id"], name: "index_tips_on_user_id"
 
   create_table "user_in_tipgroups", force: :cascade do |t|
     t.integer  "user_id"
