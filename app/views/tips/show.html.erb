@@ -10,5 +10,15 @@
   <%= @tip.points_guest %>
 </p>
 
+<p>
+  <strong>User:</strong>
+  <%= @tip.user_id %>
+</p>
+
+<p>
+  <strong>Game:</strong>
+  <%= @tip.game_id %>
+</p>
+
 <%= link_to 'Edit', edit_tip_path(@tip) %> |
 <%= link_to 'Back', tips_path %>
