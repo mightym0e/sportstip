@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151112190103) do
+ActiveRecord::Schema.define(version: 20151112194252) do
 
   create_table "games", force: :cascade do |t|
     t.text     "home"
@@ -20,7 +20,11 @@ ActiveRecord::Schema.define(version: 20151112190103) do
     t.integer  "points_guest"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.date     "day"
+    t.integer  "liga_id"
   end
+
+  add_index "games", ["liga_id"], name: "index_games_on_liga_id"
 
   create_table "leagues", force: :cascade do |t|
     t.text     "name"
@@ -59,6 +63,9 @@ ActiveRecord::Schema.define(version: 20151112190103) do
     t.text     "password"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.boolean  "isadmin"
+    t.string   "default"
+    t.string   "false"
   end
 
 end
