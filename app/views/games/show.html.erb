@@ -22,7 +22,7 @@
 
 <p>
   <strong>Liga:</strong>
-  <%= @game.league_id %>
+  <%= @game.league.name %>
 </p>
 
 <%= link_to 'Edit', edit_game_path(@game) %> |

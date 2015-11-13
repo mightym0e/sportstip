@@ -18,8 +18,8 @@
       <tr>
         <td><%= tip.points_home %></td>
         <td><%= tip.points_guest %></td>
-        <td><%= tip.user_id %></td>
-        <td><%= tip.game_id %></td>
+        <td><%= tip.user.username %></td>
+        <td><%= tip.game.game_description %></td>
         <td><%= link_to 'Show', tip %></td>
         <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
         <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>

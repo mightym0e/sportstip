@@ -12,12 +12,12 @@
 
 <p>
   <strong>User:</strong>
-  <%= @tip.user_id %>
+  <%= @tip.user.username %>
 </p>
 
 <p>
   <strong>Game:</strong>
-  <%= @tip.game_id %>
+  <%= @tip.game.game_description %>
 </p>
 
 <%= link_to 'Edit', edit_tip_path(@tip) %> |

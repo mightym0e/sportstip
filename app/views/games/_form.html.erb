@@ -28,8 +28,8 @@
     <%= f.number_field :points_guest %>
   </div>
   <div class="field">
-    <%= f.label :league_id %><br>
-    <%= f.number_field :league_id %>
+    <%= f.label :league_id %><br />
+    <%= f.select :league_id, options_from_collection_for_select(League.all, :id, :name, @game.league_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>

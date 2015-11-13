@@ -21,13 +21,13 @@
   </div>
   <div class="actions">
   <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.number_field :user_id %>
+    <%= f.label :user_id %><br />
+    <%= f.select :user_id, options_from_collection_for_select(User.all, :id, :username, @tip.user_id) %>
   </div>
   <div class="actions">
   <div class="field">
-    <%= f.label :game_id %><br>
-    <%= f.number_field :game_id %>
+    <%= f.label :game_id %><br />
+    <%= f.select :game_id, options_from_collection_for_select(Game.all, :id, :game_description, @tip.game_id) %>
   </div>
   <div class="actions">
     <%= f.submit %>
