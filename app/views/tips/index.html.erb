@@ -2,7 +2,7 @@
 
 <h1>Listing Tips</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Points home</th>
@@ -20,9 +20,9 @@
         <td><%= tip.points_guest %></td>
         <td><%= tip.user.username %></td>
         <td><%= tip.game.game_description %></td>
-        <td><%= link_to 'Show', tip %></td>
-        <td><%= link_to 'Edit', edit_tip_path(tip) %></td>
-        <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', tip, class: 'btn btn-primary btn-xs' %></td>
+        <td><%= link_to 'Edit', edit_tip_path(tip), class: 'btn btn-info btn-xs' %></td>
+        <td><%= link_to 'Destroy', tip, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-xs' %></td>
       </tr>
     <% end %>
   </tbody>
