@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  resources :sessions, only: [:new, :create, :destroy]
+  get 'login', to: 'sessions#new', as: 'login'
+  get 'logout', to: 'sessions#destroy', as: 'logout'
+  resources :users
+  get 'page/index'
+  root 'page#index'
+
+  get 'sessions/new'
+
+  get 'sessions/create'
+
+  get 'sessions/destroy'
+
   resources :leagues
   resources :games
   resources :tips
