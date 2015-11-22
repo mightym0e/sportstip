@@ -4,7 +4,8 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.all
+    @games = Game.search(params[:search])
+    # @games = Game.all
   end
 
   # GET /games/1
@@ -69,6 +70,6 @@ class GamesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def game_params
-      params.require(:game).permit(:home, :guest, :points_home, :points_guest, :league_id)
+      params.require(:game).permit(:home, :guest, :points_home, :points_guest, :league_id, :search)
     end
 end
