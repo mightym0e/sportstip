@@ -16,11 +16,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th>Home</th>
-      <th>Guest</th>
-      <th>Points home</th>
-      <th>Points guest</th>
-      <th>Liga</th>
+      <th><%= sort_link @search, :home, "Home" %></th>
+      <th><%= sort_link @search, :guest, "Guest" %></th>
+      <th><%= sort_link @search, :points_home, "Points home" %></th>
+      <th><%= sort_link @search, :points_guest, "Points guest" %></th>
+      <th><%= sort_link @search, :league, "Liga" %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
