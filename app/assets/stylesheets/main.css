@@ -1,0 +1,42 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+body{
+
+}
+
+a{
+	
+}
+
+div{
+
+}
+
+th{
+	position:relative;
+	min-width: 100px;
+	height:30px;
+}
+
+th a {
+	position:absolute;
+	left:0px;
+	right:0px;
+	bottom:0px;
+	top:0px;
+	text-align:center;
+}
+
+.asc {
+	background-image: url('up.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.desc {
+	background-image: url('down.png');
+	background-position: right center;
+	background-repeat: no-repeat;
+}

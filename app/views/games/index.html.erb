@@ -16,11 +16,11 @@
 <table class="table table-striped">
   <thead>
     <tr>
-      <th><%= link_to "Home", :sort => "home" %>			</th>
-      <th><%= link_to "Guest", :sort => "guest" %>			</th>
-      <th><%= link_to "Points home", :sort => "points_home" %>		</th>
-      <th><%= link_to "Points guest", :sort => "points_guest" %>	</th>
-      <th><%= link_to "Liga", :sort => "league_id" %>			</th>
+      <th><%= sortable "home" %>				</th>
+      <th><%= sortable "guest" %>				</th>
+      <th><%= sortable "points_home" %>				</th>
+      <th><%= sortable "points_guest" %>			</th>
+      <th><%= sortable "league_id" %>				</th>
       <th colspan="3"></th>
     </tr>
   </thead>
