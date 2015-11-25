@@ -4,8 +4,8 @@ class GamesController < ApplicationController
   # GET /games
   # GET /games.json
   def index
-    @games = Game.order(params[:sort])
     @games = Game.search(params[:search])
+    @games = @games.order(params[:sort])
     # @games = Game.all
   end
 
