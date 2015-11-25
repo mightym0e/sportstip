@@ -52,5 +52,3 @@ gem 'autoprefixer-rails'
 gem 'node'
 
 gem 'bcrypt', '~> 3.1.7'
-
-gem 'ransack'
