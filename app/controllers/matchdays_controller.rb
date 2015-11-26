@@ -37,7 +37,8 @@ class MatchdaysController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_matchday
-      @matchday = Matchday.find(params[:id])
+      @matchday = Game.where("matchday = ?", params[:id])
+      #binding.pry
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

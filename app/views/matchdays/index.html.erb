@@ -13,7 +13,7 @@
     <% @matchdays.each do |matchday| %>
       <tr>
         <td><%= matchday.matchday %></td>
-        <td><%= link_to 'Show', matchday %></td>
+        <td><%= link_to 'Show', matchday_path(matchday.id) %></td>
       </tr>
     <% end %>
   </tbody>

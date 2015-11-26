@@ -1,4 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_matchday_path(@matchday) %> |
+<h1>Listing Games for Matchday <%= params[:id] %></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% matchdays = Game.where("matchday = ?", params[:id])
+    matchdays.each do |matchday| %>
+      <tr>
+        <td><%= matchday.matchday %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Edit', edit_matchday_path(params[:id]) %> |
 <%= link_to 'Back', matchdays_path %>
