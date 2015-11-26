@@ -4,6 +4,23 @@
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
 #
+sqlite: &sqlite
+  adapter: sqlite3
+  database: db/<%= Rails.env %>.sqlite3
+ 
+mysql: &mysql
+  adapter: mysql2
+  username: root
+  password:
+  database: myapp_<%= Rails.env %>
+ 
+postgresql: &postgresql
+  adapter: postgresql
+  username: postgres
+  password:
+  database: myapp_<%= Rails.env %>
+  min_messages: ERROR
+
 default: &default
   adapter: sqlite3
   pool: 5

@@ -1,0 +1,17 @@
+language: ruby
+cache: bundler
+rvm:
+- 2.1.5
+env:
+- DB=sqlite
+before_script:
+- sudo apt-get install graphicsmagick
+script:
+- GEONAMES_USER=sportstip_ci RAILS_ENV=test bundle exec rake --trace db:migrate test:all
+deploy:
+  provider: heroku
+  api_key:
+    secure: JNedR5jBGGzJ6Opn9yGAMnObpjJAmAZCXJGBOaaJyFxe7thV8tHeWYJtDYPgLYf+UCp/zCXuJK3IQ0cZ6o6rD5m/NP48pDymmCVNc4m9ETzCQs4D+JkCg/RAld2imOMXslajPZB3WTiwLCUkhXVwXgPy55NYaofh+oG1M/nOkhphTJjPOVuQcC1tNdGcDlT2XR1q3EGeLwlnAZPTVlM9xGCA0+3jHmzp4b+i6bv6RIrd0oUCXBBh5jEwcYnOxi8TAEvRQziYavt0naDJBUC+To7r4HEwQ+rpCoijafzfv9wYgjBnQApk25ek2psbiGGhbILAWn4U3P2lfxYh5MEEtPDN1+JXyHo7d9pyADIzGMembbDAsiWkrliAE474/ZJe0OY1QAw/dslydNKBzwfoEguNX/aSiW9EQiBhsmkfXl+bncoMCNr85ZbZ2vl61GdIdjdYNz2ho2BNfCQjSaE8HrhiAo2Ax3pANmKJ7l6lh8kAyEIXn4n4bZAatSuAyZz7Sk3IWQPqET80LUTrzoKOQ+FOon/b45iFP1yBxbL2UoWDmhuqeQ5IsV46KYc3g4TLM7ila/xm/1WomsEMB+lhpftlyPprpea7lFABd+YgeI9IdzDY7+jXnrLmfeSvr5OOgd3KiWYx95Xnhm+lgkrhDXVIZsBhh2lvtUSbTXqqXKs=
+  app: sportstip
+  on:
+    repo: mightym0e/sportstip
