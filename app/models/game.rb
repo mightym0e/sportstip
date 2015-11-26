@@ -5,15 +5,12 @@ class Game < ActiveRecord::Base
     "#{home} : #{guest}"
   end
 
-
-
   def self.search(search)
-   if search
-    where(['home LIKE ? or guest like ?', "%#{search}%", "%#{search}%"])
-   else
-    all
-   end
+    if search
+      where(['home LIKE ? or guest like ?', "%#{search}%", "%#{search}%"])
+    else
+      all
+    end
   end
-
-
+  
 end

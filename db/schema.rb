@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151131224704) do
+ActiveRecord::Schema.define(version: 20151126142137) do
 
   create_table "games", force: :cascade do |t|
     t.text     "home"
@@ -20,8 +20,9 @@ ActiveRecord::Schema.define(version: 20151131224704) do
     t.integer  "points_guest"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-    t.date     "day"
     t.integer  "league_id"
+    t.datetime "date"
+    t.integer  "matchday"
   end
 
   add_index "games", ["league_id"], name: "index_games_on_league_id"
@@ -65,12 +66,10 @@ ActiveRecord::Schema.define(version: 20151131224704) do
   create_table "users", force: :cascade do |t|
     t.text     "username"
     t.text     "email"
-    t.text     "password"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.boolean  "isadmin"
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+    t.boolean  "isadmin",         default: false
     t.string   "password_digest"
-    t.string   "string"
   end
 
 end
