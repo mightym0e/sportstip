@@ -54,3 +54,5 @@ gem 'node'
 gem 'bcrypt', '~> 3.1.7'
 
 gem "pry-rails", group:"development"
+
+gem 'travis'

@@ -14,6 +14,7 @@ class MatchdaysController < ApplicationController
   # GET /matchdays/1
   # GET /matchdays/1.json
   def show
+    # @games = Game.where(matchday: params[:matchday]).all
   end
 
   # GET /matchdays/1/edit
