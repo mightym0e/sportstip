@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'User search games' do
-  scenario 'search game' do
+  scenario 'search game Alaska dogs' do
     visit games_path
 
     fill_in 'search', with: 'Alaska dogs'
