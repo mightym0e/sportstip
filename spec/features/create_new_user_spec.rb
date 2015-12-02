@@ -1,12 +1,17 @@
 describe "creating a new user", type: :feature do
   before :each do
     @email = "newadmin@admin.de"
+    @password = 'admin'
     User.create(
-      username: "admin1",
-      password: "admin1",
+      username: "admin",
+      password: @password,
       email: @email,
       isadmin: true
     )
+    visit login_path
+    fill_in 'email', :with => @email
+    fill_in 'password', :with => @password
+    click_button 'Log In'
   end
 
   it "overview shows the user" do
@@ -24,10 +29,10 @@ describe "creating a new user", type: :feature do
   it "creates a new user" do
     expect do
       visit new_user_path
-      fill_in 'username', with: 'newtestadmin'
-      fill_in 'password', with: 'newtestadmin'
-      fill_in 'email', with: 'newtestadmin@admin.de'
-      click_button 'Create User'
+      fill_in 'user_username', with: 'newtestadmin'
+      fill_in 'user_password', with: 'newtestadmin'
+      fill_in 'user_email', with: 'newtestadmin@admin.de'
+      click_button 'Update User'
     end.to change{User.count}.by(1)
   end
 end

@@ -1,3 +1,5 @@
+require 'rails_helper'
+
 describe "the signin process", :type => :feature do
   before :each do
     @email = 'admin@admin.de'
