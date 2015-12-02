@@ -10,6 +10,20 @@ require 'rails_helper'
 #     end
 #   end
 # end
+
+  def login_admin
+    login(:admin@admin.de)
+  end
+
+  def login(user)
+    user = User.where(:email => user.to_s).first
+    session[:user_id] = user.id
+  end
+
+  def current_user
+    User.find(request.session[:user_id])
+  end
+
 RSpec.describe UsersHelper, type: :helper do
   pending "add some examples to (or delete) #{__FILE__}"
 end
