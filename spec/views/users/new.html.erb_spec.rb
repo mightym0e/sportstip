@@ -21,7 +21,7 @@ RSpec.describe "users/new", type: :view do
 
       assert_select "input#user_isadmin[name=?]", "user[isadmin]"
 
-      assert_select "input#user_password_digest[name=?]", "user[password_digest]"
+      assert_select "input#user_password[name=?]", "user[password]"
     end
   end
 end
