@@ -12,7 +12,7 @@ require 'rails_helper'
 # end
 
   def login_admin
-    login(:admin@admin.de)
+    login('admin@admin.de')
   end
 
   def login(user)
