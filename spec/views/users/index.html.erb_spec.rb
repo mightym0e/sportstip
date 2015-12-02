@@ -21,8 +21,8 @@ RSpec.describe "users/index", type: :view do
   it "renders a list of users" do
     render
     assert_select "tr>td", :text => "user".to_s, :count => 2
-    assert_select "tr>td", :text => "@mail.de".to_s, :count => 2
+    assert_select "tr>td", :text => "that@mail.de".to_s, :count => 1
     assert_select "tr>td", :text => false.to_s, :count => 2
-    assert_select "tr>td", :text => "Password".to_s, :count => 2
+    assert_select "tr>td", :text => "Password".to_s, :count => 0
   end
 end
